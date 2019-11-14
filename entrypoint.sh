@@ -1,3 +1,3 @@
 #!/bin/sh -l
 
-git diff --name-only --diff-filter=A,M HEAD~1..HEAD /github/workspace
+git diff --name-only --diff-filter=AM HEAD~1..HEAD /github/workspace
