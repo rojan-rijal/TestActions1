@@ -5,5 +5,9 @@ FROM ubuntu:14.04
 COPY entrypoint.sh /entrypoint.sh
 COPY ./ /github/workspace/codes
 
+RUN apt-get update && \
+    apt-get upgrade -y && \
+    apt-get install -y git
+
 # Code file to execute when the docker container starts up (`entrypoint.sh`)
 ENTRYPOINT ["/entrypoint.sh"]
